@@ -39,22 +39,34 @@
 //function to create object
 //add key value pair
 //return the object
-function createuser(firstname,lastname,age,email,address,){
-const user={};
-user.firstname = firstname;
-user.lastname = lastname;
-user.age = age;
-user.email = email;
-user.address = address;
-user.about = function(){
-    return `name is ${this.firstname} age is ${this.age}`
-};
-user.is18 = function(){
-    return this.age >= 18;
+// function createuser(firstname,lastname,age,email,address,){
+// const user={};
+// user.firstname = firstname;
+// user.lastname = lastname;
+// user.age = age;
+// user.email = email;
+// user.address = address;
+// user.about = function(){
+//     return `name is ${this.firstname} age is ${this.age}`
+// };
+// user.is18 = function(){
+//     return this.age >= 18;
+// }
+// return user;
+// }
+// const user1 = createuser("akhil","mohan",20,"akhil@gmail.com","Odisha",)
+// console.log(user1)
+// const meis18 = user1.about()
+// console.log(meis18)
+const myuser1 = {
+    key1: "Value1",
+    key2:"Value2"
 }
-return user;
-}
-const user1 = createuser("akhil","mohan",20,"akhil@gmail.com","Odisha",)
-console.log(user1)
-const meis18 = user1.about()
-console.log(meis18)
+// const myuser2 = {
+//     key3: "Value3",
+//     key4:"Value4"
+// }
+//console.log(myuser1.key1)
+const myuser2 = Object.create(myuser1)
+    myuser2.key3 = "Value3"
+    console.log(myuser2.key2)
